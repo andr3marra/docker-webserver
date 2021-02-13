@@ -44,4 +44,4 @@ jobs:
         with:
           url: ${{ secrets.SERVER_IP_ADRESS }}
           method: POST
-          payload: '{"repo": "${{ env.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:latest"}'
+          payload: '{"repo": "${{ env.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:latest"}, {"params": "${{ secrets.PARAMS }}"}'
